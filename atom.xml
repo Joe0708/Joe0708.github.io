@@ -5,9 +5,9 @@
   <subtitle>Joe</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://joe0708.github.io/"/>
   <updated>2018-01-14T10:47:26.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://joe0708.github.io/</id>
   
   <author>
     <name>[object Object]</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/01/14/hello-world/"/>
-    <id>http://yoursite.com/2018/01/14/hello-world/</id>
+    <link href="http://joe0708.github.io/2018/01/14/hello-world/"/>
+    <id>http://joe0708.github.io/2018/01/14/hello-world/</id>
     <published>2018-01-14T09:33:33.000Z</published>
     <updated>2018-01-14T10:47:26.000Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>在 macOS 上更优雅的使用答题辅助脚本</title>
-    <link href="http://yoursite.com/2018/01/13/DaTiFuZhu/"/>
-    <id>http://yoursite.com/2018/01/13/DaTiFuZhu/</id>
+    <link href="http://joe0708.github.io/2018/01/13/DaTiFuZhu/"/>
+    <id>http://joe0708.github.io/2018/01/13/DaTiFuZhu/</id>
     <published>2018-01-13T07:29:57.000Z</published>
     <updated>2018-01-14T16:36:18.000Z</updated>
     
@@ -56,19 +56,19 @@
     
     </summary>
     
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+      <category term="Python" scheme="http://joe0708.github.io/categories/Python/"/>
     
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+      <category term="Python" scheme="http://joe0708.github.io/tags/Python/"/>
     
-      <category term="脚本" scheme="http://yoursite.com/tags/%E8%84%9A%E6%9C%AC/"/>
+      <category term="脚本" scheme="http://joe0708.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
   <entry>
     <title>Vim 复习笔记</title>
-    <link href="http://yoursite.com/2018/01/05/Vim-%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2018/01/05/Vim-复习笔记/</id>
+    <link href="http://joe0708.github.io/2018/01/05/Vim-%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://joe0708.github.io/2018/01/05/Vim-复习笔记/</id>
     <published>2018-01-05T14:57:26.000Z</published>
     <updated>2018-01-14T16:59:53.000Z</updated>
     
@@ -88,16 +88,16 @@
     </summary>
     
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Vim" scheme="http://joe0708.github.io/tags/Vim/"/>
     
-      <category term="Vim" scheme="http://yoursite.com/tags/Vim/"/>
+      <category term="Linux" scheme="http://joe0708.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>重新学 Linux 命令</title>
-    <link href="http://yoursite.com/2018/01/05/%E9%87%8D%E6%96%B0%E5%AD%A6-Linux-%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com/2018/01/05/重新学-Linux-命令/</id>
+    <link href="http://joe0708.github.io/2018/01/05/%E9%87%8D%E6%96%B0%E5%AD%A6-Linux-%E5%91%BD%E4%BB%A4/"/>
+    <id>http://joe0708.github.io/2018/01/05/重新学-Linux-命令/</id>
     <published>2018-01-05T14:08:52.000Z</published>
     <updated>2018-01-14T16:56:58.000Z</updated>
     
@@ -117,14 +117,14 @@
     </summary>
     
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://joe0708.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>fastlane boarding 实践笔记</title>
-    <link href="http://yoursite.com/2017/12/23/fastlane-boarding-%E5%AE%9E%E8%B7%B5%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2017/12/23/fastlane-boarding-实践笔记/</id>
+    <link href="http://joe0708.github.io/2017/12/23/fastlane-boarding-%E5%AE%9E%E8%B7%B5%E7%AC%94%E8%AE%B0/"/>
+    <id>http://joe0708.github.io/2017/12/23/fastlane-boarding-实践笔记/</id>
     <published>2017-12-23T13:49:00.000Z</published>
     <updated>2018-01-14T16:48:29.000Z</updated>
     
@@ -139,19 +139,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
     
-      <category term="fastlane" scheme="http://yoursite.com/tags/fastlane/"/>
+      <category term="fastlane" scheme="http://joe0708.github.io/tags/fastlane/"/>
     
   </entry>
   
   <entry>
     <title>Chromium for macOS 内置插件、自定义及自动化脚本(二)</title>
-    <link href="http://yoursite.com/2017/12/23/Chromium-for-macOS-%E5%86%85%E7%BD%AE%E6%8F%92%E4%BB%B6%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC-(%E4%BA%8C)/"/>
-    <id>http://yoursite.com/2017/12/23/Chromium-for-macOS-内置插件、自定义及自动化脚本-(二)/</id>
+    <link href="http://joe0708.github.io/2017/12/23/Chromium-for-macOS-%E5%86%85%E7%BD%AE%E6%8F%92%E4%BB%B6%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC-(%E4%BA%8C)/"/>
+    <id>http://joe0708.github.io/2017/12/23/Chromium-for-macOS-内置插件、自定义及自动化脚本-(二)/</id>
     <published>2017-12-23T10:43:05.000Z</published>
     <updated>2018-01-14T16:53:16.000Z</updated>
     
@@ -168,14 +168,14 @@
     </summary>
     
     
-      <category term="Chromium" scheme="http://yoursite.com/tags/Chromium/"/>
+      <category term="Chromium" scheme="http://joe0708.github.io/tags/Chromium/"/>
     
   </entry>
   
   <entry>
     <title>Chromium for macOS 编译教程(一)</title>
-    <link href="http://yoursite.com/2017/12/23/Chromium-for-macOS-%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B(%E4%B8%80)/"/>
-    <id>http://yoursite.com/2017/12/23/Chromium-for-macOS-编译教程(一)/</id>
+    <link href="http://joe0708.github.io/2017/12/23/Chromium-for-macOS-%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B(%E4%B8%80)/"/>
+    <id>http://joe0708.github.io/2017/12/23/Chromium-for-macOS-编译教程(一)/</id>
     <published>2017-12-23T08:13:50.000Z</published>
     <updated>2018-01-14T16:53:32.000Z</updated>
     
@@ -193,14 +193,14 @@
     </summary>
     
     
-      <category term="Chromium" scheme="http://yoursite.com/tags/Chromium/"/>
+      <category term="Chromium" scheme="http://joe0708.github.io/tags/Chromium/"/>
     
   </entry>
   
   <entry>
     <title>Call to undefined function mysql_connect()</title>
-    <link href="http://yoursite.com/2016/11/21/Call%20to%20undefined%20function%20mysql%20connect/"/>
-    <id>http://yoursite.com/2016/11/21/Call to undefined function mysql connect/</id>
+    <link href="http://joe0708.github.io/2016/11/21/Call%20to%20undefined%20function%20mysql%20connect/"/>
+    <id>http://joe0708.github.io/2016/11/21/Call to undefined function mysql connect/</id>
     <published>2016-11-21T02:23:16.000Z</published>
     <updated>2018-01-14T14:48:06.000Z</updated>
     
@@ -216,19 +216,19 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://yoursite.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://joe0708.github.io/categories/PHP/"/>
     
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+      <category term="PHP" scheme="http://joe0708.github.io/tags/PHP/"/>
     
-      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+      <category term="MySQL" scheme="http://joe0708.github.io/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>SQL基础 - 增删改查</title>
-    <link href="http://yoursite.com/2016/11/21/SQL%20basic%20CURD/"/>
-    <id>http://yoursite.com/2016/11/21/SQL basic CURD/</id>
+    <link href="http://joe0708.github.io/2016/11/21/SQL%20basic%20CURD/"/>
+    <id>http://joe0708.github.io/2016/11/21/SQL basic CURD/</id>
     <published>2016-11-21T02:20:40.000Z</published>
     <updated>2018-01-14T14:48:43.000Z</updated>
     
@@ -243,19 +243,19 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://yoursite.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://joe0708.github.io/categories/PHP/"/>
     
     
-      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+      <category term="PHP" scheme="http://joe0708.github.io/tags/PHP/"/>
     
-      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+      <category term="SQL" scheme="http://joe0708.github.io/tags/SQL/"/>
     
   </entry>
   
   <entry>
     <title>数据库基本操作</title>
-    <link href="http://yoursite.com/2016/11/21/database%20basic%20operate/"/>
-    <id>http://yoursite.com/2016/11/21/database basic operate/</id>
+    <link href="http://joe0708.github.io/2016/11/21/database%20basic%20operate/"/>
+    <id>http://joe0708.github.io/2016/11/21/database basic operate/</id>
     <published>2016-11-21T02:15:36.000Z</published>
     <updated>2018-01-14T14:48:25.000Z</updated>
     
@@ -270,19 +270,19 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://yoursite.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://joe0708.github.io/categories/PHP/"/>
     
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+      <category term="PHP" scheme="http://joe0708.github.io/tags/PHP/"/>
     
-      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+      <category term="MySQL" scheme="http://joe0708.github.io/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>利用 CrossOver 安装Windows应用程序</title>
-    <link href="http://yoursite.com/2016/10/24/Crossover%20guide/"/>
-    <id>http://yoursite.com/2016/10/24/Crossover guide/</id>
+    <link href="http://joe0708.github.io/2016/10/24/Crossover%20guide/"/>
+    <id>http://joe0708.github.io/2016/10/24/Crossover guide/</id>
     <published>2016-10-24T01:35:23.000Z</published>
     <updated>2018-01-14T15:53:13.000Z</updated>
     
@@ -297,19 +297,19 @@
     
     </summary>
     
-      <category term="软件" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="软件" scheme="http://joe0708.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
-      <category term="macOS" scheme="http://yoursite.com/tags/macOS/"/>
+      <category term="macOS" scheme="http://joe0708.github.io/tags/macOS/"/>
     
-      <category term="CrossOver" scheme="http://yoursite.com/tags/CrossOver/"/>
+      <category term="CrossOver" scheme="http://joe0708.github.io/tags/CrossOver/"/>
     
   </entry>
   
   <entry>
     <title>解决 macOS Sierra(10.12) 安全与隐私没有允许任何来源的选项 </title>
-    <link href="http://yoursite.com/2016/09/22/macOSSierra/"/>
-    <id>http://yoursite.com/2016/09/22/macOSSierra/</id>
+    <link href="http://joe0708.github.io/2016/09/22/macOSSierra/"/>
+    <id>http://joe0708.github.io/2016/09/22/macOSSierra/</id>
     <published>2016-09-22T05:37:32.000Z</published>
     <updated>2018-01-14T14:48:37.000Z</updated>
     
@@ -324,17 +324,17 @@
     
     </summary>
     
-      <category term="macOS" scheme="http://yoursite.com/categories/macOS/"/>
+      <category term="macOS" scheme="http://joe0708.github.io/categories/macOS/"/>
     
     
-      <category term="macOS" scheme="http://yoursite.com/tags/macOS/"/>
+      <category term="macOS" scheme="http://joe0708.github.io/tags/macOS/"/>
     
   </entry>
   
   <entry>
     <title>利用 AFNetworking + YYCache 对网络请求进行简单缓存</title>
-    <link href="http://yoursite.com/2016/09/14/AFNetworking%20YYCache/"/>
-    <id>http://yoursite.com/2016/09/14/AFNetworking YYCache/</id>
+    <link href="http://joe0708.github.io/2016/09/14/AFNetworking%20YYCache/"/>
+    <id>http://joe0708.github.io/2016/09/14/AFNetworking YYCache/</id>
     <published>2016-09-14T08:45:34.000Z</published>
     <updated>2018-01-14T14:54:58.000Z</updated>
     
@@ -352,19 +352,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
     
-      <category term="CocoaPods" scheme="http://yoursite.com/tags/CocoaPods/"/>
+      <category term="CocoaPods" scheme="http://joe0708.github.io/tags/CocoaPods/"/>
     
   </entry>
   
   <entry>
     <title>UITableView 性能优化</title>
-    <link href="http://yoursite.com/2016/09/12/UITableView%20performance%20optimize/"/>
-    <id>http://yoursite.com/2016/09/12/UITableView performance optimize/</id>
+    <link href="http://joe0708.github.io/2016/09/12/UITableView%20performance%20optimize/"/>
+    <id>http://joe0708.github.io/2016/09/12/UITableView performance optimize/</id>
     <published>2016-09-12T03:37:59.000Z</published>
     <updated>2018-01-14T14:48:49.000Z</updated>
     
@@ -379,19 +379,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
     
-      <category term="UITableView" scheme="http://yoursite.com/tags/UITableView/"/>
+      <category term="UITableView" scheme="http://joe0708.github.io/tags/UITableView/"/>
     
   </entry>
   
   <entry>
     <title>iOS中几种数据持久化的方案</title>
-    <link href="http://yoursite.com/2016/09/09/iOS%20data%20persistence/"/>
-    <id>http://yoursite.com/2016/09/09/iOS data persistence/</id>
+    <link href="http://joe0708.github.io/2016/09/09/iOS%20data%20persistence/"/>
+    <id>http://joe0708.github.io/2016/09/09/iOS data persistence/</id>
     <published>2016-09-09T06:45:28.000Z</published>
     <updated>2018-01-14T14:48:13.000Z</updated>
     
@@ -406,17 +406,17 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>为自己的开源库添加对CocoaPods的支持</title>
-    <link href="http://yoursite.com/2016/09/07/CocoaPods/"/>
-    <id>http://yoursite.com/2016/09/07/CocoaPods/</id>
+    <link href="http://joe0708.github.io/2016/09/07/CocoaPods/"/>
+    <id>http://joe0708.github.io/2016/09/07/CocoaPods/</id>
     <published>2016-09-07T01:34:00.000Z</published>
     <updated>2018-01-14T14:48:16.000Z</updated>
     
@@ -432,19 +432,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
     
-      <category term="CocoaPods" scheme="http://yoursite.com/tags/CocoaPods/"/>
+      <category term="CocoaPods" scheme="http://joe0708.github.io/tags/CocoaPods/"/>
     
   </entry>
   
   <entry>
     <title>如何排查 message sent to deallocated instance 问题</title>
-    <link href="http://yoursite.com/2016/09/06/message%20sent%20to%20deallocated%20instance/"/>
-    <id>http://yoursite.com/2016/09/06/message sent to deallocated instance/</id>
+    <link href="http://joe0708.github.io/2016/09/06/message%20sent%20to%20deallocated%20instance/"/>
+    <id>http://joe0708.github.io/2016/09/06/message sent to deallocated instance/</id>
     <published>2016-09-06T02:04:10.000Z</published>
     <updated>2018-01-14T14:48:33.000Z</updated>
     
@@ -462,10 +462,10 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
     
   </entry>
   
