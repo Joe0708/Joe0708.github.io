@@ -1,0 +1,507 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><title>数据库基本操作 | Joe</title><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="author" content="[object Object]"><meta name="designer" content="minfive"><meta name="keywords" content="joe, ios developer, Python, php, 程序员, 全栈开发"><meta name="description" content="日常学习、生活及工作的一些心得记录"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=yes"><meta name="mobile-web-app-capable" content="yes"><meta name="robots" content="all"><link rel="canonical" href="http://yoursite.com/2016/11/21/database basic operate/index.html"><link rel="icon" type="image/png" href="http://ojpb4w81b.bkt.clouddn.com/18-1-15/70545015.jpg" sizes="32x32"><link rel="stylesheet" href="/scss/base/index.css"><link rel="alternate" href="/atom.xml" title="Joe"><link rel="stylesheet" href="/scss/views/page/post.css"></head><body ontouchstart><div id="page-loading" class="page page-loading" style="background-image:url(http://oo12ugek5.bkt.clouddn.com/blog/images/loader.gif)"></div><div id="page" class="page js-hidden"><header class="page__small-header page__header--small"><nav class="page__navbar"><div class="page__container navbar-container"><a class="page__logo" href="/" title="Joe" alt="Joe"><img src="http://ojpb4w81b.bkt.clouddn.com/18-1-14/88417485.jpg" alt="Joe"></a><nav class="page__nav"><ul class="nav__list clearfix"><li class="nav__item"><a href="/" alt="首页" title="首页">首页</a></li><li class="nav__item"><a href="/archives" alt="归档" title="归档">归档</a></li><li class="nav__item"><a href="/about" alt="关于" title="关于">关于</a></li></ul></nav><button class="page__menu-btn" type="button"><i class="iconfont icon-menu"></i></button></div></nav></header><main class="page__container page__main"><div class="page__content"><article class="page__post"><div class="post__cover"><img src="http://ojpb4w81b.bkt.clouddn.com/18-1-14/20649357.jpg" alt="数据库基本操作"></div><header class="post__info"><h1 class="post__title">数据库基本操作</h1><div class="post__mark"><div class="mark__block"><i class="mark__icon iconfont icon-write"></i><ul class="mark__list clearfix"><li class="mark__item"><a href="https://www.github.com/Joe0708">Joe</a></li></ul></div><div class="mark__block"><i class="mark__icon iconfont icon-time"></i><ul class="mark__list clearfix"><li class="mark__item"><span>2016-11-21</span></li></ul></div><div class="mark__block"><i class="mark__icon iconfont icon-tab"></i><ul class="mark__list clearfix"><li class="mark__item"><a href="/tags/MySQL/">MySQL</a></li><li class="mark__item"><a href="/tags/PHP/">PHP</a></li></ul></div><div class="mark__block"><i class="mark__icon iconfont icon-eye"></i><ul class="mark__list clearfix"><li id="busuanzi_container_page_pv" class="mark__item"><span id="busuanzi_value_page_pv"></span>次</li></ul></div></div></header><div class="post__content"><h2 id="MySQL-数据库操作"><a href="#MySQL-数据库操作" class="headerlink" title="MySQL 数据库操作"></a>MySQL 数据库操作</h2><h3 id="1、登陆到MySQL服务器"><a href="#1、登陆到MySQL服务器" class="headerlink" title="1、登陆到MySQL服务器"></a>1、登陆到MySQL服务器</h3><pre><code>语法格式 : mysql -u用户名 -p密码
+
+参数说明 :
+ * /Applications/MAMP/Library/bin/mysql : 代表mysql的主程序
+
+ * -u : 代表MySQL用户名,后面紧跟密码, 如 -uroot
+
+ * -p : 代表MySQL密码, 后面紧跟密码, 如 -proot
+
+举例:
+     /Applications/MAMP/Library/bin/mysql -uroot -proot
+</code></pre><h3 id="2、显示所有已有数据库"><a href="#2、显示所有已有数据库" class="headerlink" title="2、显示所有已有数据库"></a>2、显示所有已有数据库</h3><pre><code>语法格式 : show databases;
+</code></pre><p><img src="http://ww3.sinaimg.cn/large/65e4f1e6gw1f9yfx4bzvuj20ag07imxv.jpg" alt=""></p><h3 id="3、-创建数据库"><a href="#3、-创建数据库" class="headerlink" title="3、 创建数据库"></a>3、 创建数据库</h3><pre><code>语法格式 : create database [if not exists] db_name [charset utf8]
+参数说明
+    * create database : MySQL命令,创建一个数据库
+    * if not exists : 可选项,如果这个数据库不存在则创建数据库.
+    * db_name : 数据库的名称
+    * charset : 可选项,设置数据库的字符集(默认lain1)
+
+举例: create database if not exists student charset utf8;
+</code></pre><p><img src="http://ww4.sinaimg.cn/large/65e4f1e6gw1f9yg6s52oaj20aw08ot9g.jpg" alt=""></p><h3 id="4、-删除数据库"><a href="#4、-删除数据库" class="headerlink" title="4、 删除数据库"></a>4、 删除数据库</h3><pre><code>语法格式 : drop database [if exists] db_name;
+参数说明
+    * drop database: MySQL命令, 删除一个数据库
+    * if exists : 可选项, 如果存在则删除数据库
+    * db_name : 数据库名
+
+举例: drop database if exists student;
+</code></pre><h3 id="5、MySQL数据库字符集"><a href="#5、MySQL数据库字符集" class="headerlink" title="5、MySQL数据库字符集"></a>5、MySQL数据库字符集</h3><ol><li><p>查看数据库的字符集</p><pre><code>语法格式 : show create database db_name;
+
+举例: show create database student;
+</code></pre><p><img src="http://ww3.sinaimg.cn/large/65e4f1e6gw1f9ygdx6tb4j20vg09u404.jpg" alt=""></p></li><li><p>修改数据库的字符集</p><pre><code>语法格式 : alter database db_name default character set utf8;
+
+举例: alter database student default character set utf8;
+</code></pre></li></ol><h2 id="MySQL-数据表操作"><a href="#MySQL-数据表操作" class="headerlink" title="MySQL 数据表操作"></a>MySQL 数据表操作</h2><h3 id="1、选择数据库"><a href="#1、选择数据库" class="headerlink" title="1、选择数据库"></a>1、选择数据库</h3><pre><code>描述 : 选择所需要操作的数据库
+语法格式 : user db_name    
+举例: user student;
+</code></pre><h3 id="2、显示所有的数据表"><a href="#2、显示所有的数据表" class="headerlink" title="2、显示所有的数据表"></a>2、显示所有的数据表</h3><pre><code>描述 : 选择当前所操作数据库下的所有数据表
+语法格式 : show tables
+</code></pre><h3 id="3、创建数据表"><a href="#3、创建数据表" class="headerlink" title="3、创建数据表"></a>3、创建数据表</h3><pre><code>描述 : 在当前数据库中创建一个数据表
+
+语法格式 : create table table_name(col_name col_type col_attr,col_name col_type col_attr,...)
+参数说明 :
+    * create table : 创建一个数据表
+    * table_name : 数据表表名
+    * col_name : 列的名称
+    * col_type : 列的类型.(eg: tinyint、int、bigint、char、varchar、text、date、time等)
+    * col_attr : 列的属性
+        - not null | null : 该列是否可以为空.
+        - default default_value : 指定该列的默认值.
+        - default_value 默认是字符串, 也可以是整型
+        - auto_increment : 该列值为自动增长型,或者自动编号.类型必须是整型
+        - primary key : 主键. 指定该列的值具有唯一性, 不能为空.(配合 not null 使用), 一个表只能有一个主键
+        - id 字段的属性必须有: not null auto_increment primary key
+注意: 一个数据表,由多个列构成.多个列定义之间用英文逗号隔开
+举例: 
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mysql&gt; create table student(</span><br><span class="line">   id int not null auto_increment primary key,</span><br><span class="line">   name varchar(20) not null,</span><br><span class="line">   gender tinyint,</span><br><span class="line"> 	 profile text</span><br><span class="line">  );</span><br></pre></td></tr></table></figure>
+<p> <img src="http://ww1.sinaimg.cn/large/65e4f1e6gw1f9yjjuovs1j20ju0cy404.jpg" alt=""></p>
+<h3 id="4、查看数据表结构"><a href="#4、查看数据表结构" class="headerlink" title="4、查看数据表结构"></a>4、查看数据表结构</h3><pre><code>语法格式 : describe table_name;
+
+举例 : describe student;
+</code></pre><p><img src="http://ww1.sinaimg.cn/large/65e4f1e6gw1f9yjrevf9pj20pw08i762.jpg" alt=""></p>
+<h3 id="5、修改数据表"><a href="#5、修改数据表" class="headerlink" title="5、修改数据表"></a>5、修改数据表</h3><pre><code>语法格式 : alter table
+举例 : 详情可参考MySQL语法手册, 在此不演示
+</code></pre><h3 id="6、删除数据表"><a href="#6、删除数据表" class="headerlink" title="6、删除数据表"></a>6、删除数据表</h3><pre><code>语法格式 : drop table [if exists] table_name;
+举例 : drop table student;
+</code></pre><h2 id="MySQL-数据类型"><a href="#MySQL-数据类型" class="headerlink" title="MySQL 数据类型"></a>MySQL 数据类型</h2><ol>
+<li>整型浮点型</li>
+</ol>
+<ul>
+<li>整型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:right">范围</th>
+<th style="text-align:right">大小</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">tinyint</td>
+<td style="text-align:center">最小型整数</td>
+<td style="text-align:right">0~255(-128 ~ + 127)</td>
+<td style="text-align:right">一个字节</td>
+</tr>
+<tr>
+<td style="text-align:left">smallint</td>
+<td style="text-align:center">小型整数</td>
+<td style="text-align:right">0~65535</td>
+<td style="text-align:right">二个字节</td>
+</tr>
+<tr>
+<td style="text-align:left">mediumint</td>
+<td style="text-align:center">中型整数</td>
+<td style="text-align:right">0~1677万</td>
+<td style="text-align:right">三个字节</td>
+</tr>
+<tr>
+<td style="text-align:left">int</td>
+<td style="text-align:center">一般整数</td>
+<td style="text-align:right">0~21亿</td>
+<td style="text-align:right">四个字节</td>
+</tr>
+<tr>
+<td style="text-align:left">bigint</td>
+<td style="text-align:center">最大整数</td>
+<td style="text-align:right">0~42亿</td>
+<td style="text-align:right">八个字节</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>浮点型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:center">范围</th>
+<th style="text-align:right">描述</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">float(m,d)</td>
+<td style="text-align:center">单精度(精确到小数点后7位)</td>
+<td style="text-align:right">M代表长度, D代表小数位数</td>
+<td style="text-align:right">float(6,2) 总长度为6位,小数位为2位,小数点不算,最大值为9999.99</td>
+</tr>
+<tr>
+<td style="text-align:left">double(m.d)</td>
+<td style="text-align:center">双精度(精确到小数点后15位)</td>
+<td style="text-align:right">M代表长度, D代表小数位数</td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>日期时间型</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:right">格式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">date</td>
+<td style="text-align:center">日期型</td>
+<td style="text-align:right">“YYYY-MM-DD”</td>
+</tr>
+<tr>
+<td style="text-align:left">time</td>
+<td style="text-align:center">时间型</td>
+<td style="text-align:right">“00:00:00”</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>字符、文本型</li>
+</ol>
+<ul>
+<li>字符型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:center">范围</th>
+<th style="text-align:right">描述</th>
+<th style="text-align:right">大小</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">char(m)</td>
+<td style="text-align:center">0~255</td>
+<td style="text-align:right">m代表长度, 固定长度的字符串</td>
+<td style="text-align:right">一个字节</td>
+<td>如:邮编、手机号码、电话号码等</td>
+</tr>
+<tr>
+<td style="text-align:left">varchar(m)</td>
+<td style="text-align:center">0~65535</td>
+<td style="text-align:right">m代表长度, 可变长度的字符串</td>
+<td style="text-align:right">二个字节</td>
+<td>如:新闻标题、家庭地址、毕业院校等</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>文本型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:center">范围</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">tinytext</td>
+<td style="text-align:center">0~255</td>
+<td style="text-align:right">小型文本</td>
+</tr>
+<tr>
+<td style="text-align:left">text</td>
+<td style="text-align:center">0~1670万</td>
+<td style="text-align:right">中型文本</td>
+</tr>
+<tr>
+<td style="text-align:left">longtext</td>
+<td style="text-align:center">0~42亿</td>
+<td style="text-align:right">大型文本</td>
+</tr>
+</tbody>
+</table>
+
+
+        
+        <div class="post-announce">
+            感谢您的阅读，本文由
+            <a href="http://yoursite.com">Joe</a>
+            版权所有。如若转载，请注明出处：Joe（<a href="http://yoursite.com/2016/11/21/database basic operate/">http://yoursite.com/2016/11/21/database basic operate/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
+                
+                <a href="/2016/10/24/Crossover guide/" title="利用 CrossOver 安装Windows应用程序"><i class="iconfont icon-prev"></i>利用 CrossOver 安装Windows应用程序</a>
+                
+            </div>
+            <div class="post__prev post__prev--right">
+                
+                <a href="/2016/11/21/SQL basic CURD/" title="SQL基础 - 增删改查">SQL基础 - 增删改查<i class="iconfont icon-next"></i></a>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+        
+            <div id="comment-container"></div>
+        
+        
+    </div>
+
+    <aside class="page__sidebar">
+    
+
+    <form id="page-search-from" class="page__search-from" action="/search/">
+        <label class="search-form__item">
+            <input class="input" type="text" name="search" placeholder="Search...">
+            <i class="iconfont icon-search"></i>
+        </label>
+    </form>
+
+    
+        <div class="sidebar__block">
+            <h3 class="block__title">简介</h3>
+            <p class="block__text">日常学习、生活及工作的一些心得记录</p>
+        </div>
+    
+
+    <div class="sidebar__block">
+        <h3 class="block__title">文章分类</h3>
+        <ul class="block-list"><li class="block-list-item"><a class="block-list-link" href="/categories/软件/">软件</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/macOS/">macOS</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/iOS/">iOS</a><span class="block-list-count">6</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/Python/">Python</a><span class="block-list-count">1</span></li><li class="block-list-item"><a class="block-list-link" href="/categories/PHP/">PHP</a><span class="block-list-count">3</span></li></ul>
+    </div>
+    
+    <div class="sidebar__block">
+        <h3 class="block__title">最新文章</h3>
+        
+        <ul class="block-list latest-post-list">
+            
+                    <li class="latest-post-item">
+                        <a href="/2018/01/14/hello-world/" title="Hello World">
+                            <div class="item__cover">
+                                <img src="http://oxnuwmm3w.bkt.clouddn.com/hello-world.jpeg" alt="Hello World">
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Hello World</h3>
+                                <span class="item__text">2018-01-14</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2018/01/13/DaTiFuZhu/" title="在 macOS 上更优雅的使用答题辅助脚本">
+                            <div class="item__cover">
+                                <img src="https://camo.githubusercontent.com/45ccd3ace056bcbfa470f743bef02d1af380d7a1/687474703a2f2f6f6a706234773831622e626b742e636c6f7564646e2e636f6d2f31382d312d31322f38343638343436332e6a7067" alt="在 macOS 上更优雅的使用答题辅助脚本">
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">在 macOS 上更优雅的使用答题辅助脚本</h3>
+                                <span class="item__text">2018-01-13</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2018/01/05/Vim-复习笔记/" title="Vim 复习笔记">
+                            <div class="item__cover">
+                                <img src="http://ojpb4w81b.bkt.clouddn.com/18-1-15/38008852.jpg" alt="Vim 复习笔记">
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">Vim 复习笔记</h3>
+                                <span class="item__text">2018-01-05</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2018/01/05/重新学-Linux-命令/" title="重新学 Linux 命令">
+                            <div class="item__cover">
+                                <img src="http://ojpb4w81b.bkt.clouddn.com/18-1-15/74981402.jpg" alt="重新学 Linux 命令">
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">重新学 Linux 命令</h3>
+                                <span class="item__text">2018-01-05</span>
+                            </div>
+                        </a>
+                    </li>
+                
+        </ul>
+    
+    </div>
+
+    <div class="sidebar__block">
+        <h3 class="block__title">文章标签</h3>
+        
+        <ul class="block-list tag-list clearfix">
+            
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/Chromium/">Chromium</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/CocoaPods/">CocoaPods</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/CrossOver/">CrossOver</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/Linux/">Linux</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/MySQL/">MySQL</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/PHP/">PHP</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/Python/">Python</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/SQL/">SQL</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/UITableView/">UITableView</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/Vim/">Vim</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/fastlane/">fastlane</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/iOS/">iOS</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/macOS/">macOS</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/脚本/">脚本</a>
+                    </li>  
+                
+        </ul>
+    
+    </div>
+
+    
+</aside>
+</main>
+
+
+        
+            
+<footer class="page__footer">
+    <section class="footer__top">
+        <div class="page__container footer__container">
+            
+            <div class="footer-top__item footer-top__item--2">
+                <h3 class="item__title">关于</h3>
+                <div class="item__content">
+                    <p class="item__text">分享日常学习、生活及工作的一些心得总结，欢迎点击右下角订阅 rss。</p>
+                    <ul class="footer__contact-info">
+                        <li class="contact-info__item">
+                            <i class="iconfont icon-address"></i>
+                            <span>Guangzhou, Guangdong Province, China</span>
+                        </li>
+                        <li class="contact-info__item">
+                            <i class="iconfont icon-email2"></i>
+                            <span>aidevjoe@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+                <div class="footer-top__item footer__image">
+                    <img src="http://ojpb4w81b.bkt.clouddn.com/18-1-15/12385169.jpg" alt="logo" title="Joe">
+                </div>
+            
+            
+            
+            
+        </div>
+    </section>
+    <section class="footer__bottom">
+        <div class="page__container footer__container">
+            <p class="footer__copyright">©
+                <a href="https://github.com/Mrminfive/hexo-theme-skapp" target="_blank">Skapp</a> 2017 powered by
+                <a href="http://hexo.io/" target="_blank">Hexo</a>, made by 
+                <a href="https://github.com/Mrminfive" target="_blank">minfive</a>.
+            </p>
+            <ul class="footer__social-network clearfix">
+                
+                
+                    <li class="social-network__item">
+                        <a href="https://github.com/Joe0708" target="_blank" title="Github">
+                            <i class="iconfont icon-github"></i>
+                        </a>
+                    </li>
+                
+                    <li class="social-network__item">
+                        <a href="https://weibo.com/5363151025/profile" target="_blank" title="WeiBo">
+                            <i class="iconfont icon-weibo"></i>
+                        </a>
+                    </li>
+                
+                    <li class="social-network__item">
+                        <a href="mailto:aidevjoe@gmail.com" target="_blank" title="Email">
+                            <i class="iconfont icon-email"></i>
+                        </a>
+                    </li>
+                
+                    <li class="social-network__item">
+                        <a href="/atom.xml" target="_blank" title="RSS">
+                            <i class="iconfont icon-rss"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </section>
+</footer>
+        
+
+        
+            
+<div id="back-top" class="back-top back-top--hidden js-hidden">
+    <i class="iconfont icon-top"></i>
+</div>
+        
+    </div>
+
+    <script src="/js/common.js"></script>
+
+    
+    <script src="/js/page/post.js"></script>
+
+
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+    <script>var tags=["MySQL","PHP"],gitalk=new Gitalk({clientID:"a6b73149690856adf53e",clientSecret:"2927c75214be49ec5f722b32e6724adae4cb5be4",repo:"https://github.com/Joe0708/Joe0708.github.io",owner:"Joe0708",admin:["J","o","e","0","7","0","8"],labels:tags});gitalk.render("comment-container")</script>
+
+
+
+    
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>
