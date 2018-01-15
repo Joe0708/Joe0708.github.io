@@ -18,8 +18,8 @@
   
   <entry>
     <title>在 macOS 上更优雅的使用答题辅助脚本</title>
-    <link href="http://joe0708.github.io/2018/01/13/DaTiFuZhu/"/>
-    <id>http://joe0708.github.io/2018/01/13/DaTiFuZhu/</id>
+    <link href="http://joe0708.github.io/2018/01/13/%E5%9C%A8-macOS-%E4%B8%8A%E6%9B%B4%E4%BC%98%E9%9B%85%E7%9A%84%E4%BD%BF%E7%94%A8%E7%AD%94%E9%A2%98%E8%BE%85%E5%8A%A9%E8%84%9A%E6%9C%AC/"/>
+    <id>http://joe0708.github.io/2018/01/13/在-macOS-上更优雅的使用答题辅助脚本/</id>
     <published>2018-01-13T07:29:57.000Z</published>
     <updated>2018-01-14T16:36:18.000Z</updated>
     
@@ -206,8 +206,8 @@
   
   <entry>
     <title>SQL基础 - 增删改查</title>
-    <link href="http://joe0708.github.io/2016/11/21/SQL%20basic%20CURD/"/>
-    <id>http://joe0708.github.io/2016/11/21/SQL basic CURD/</id>
+    <link href="http://joe0708.github.io/2016/11/21/SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/"/>
+    <id>http://joe0708.github.io/2016/11/21/SQL基础-增删改查/</id>
     <published>2016-11-21T02:20:40.000Z</published>
     <updated>2018-01-14T14:48:43.000Z</updated>
     
@@ -233,8 +233,8 @@
   
   <entry>
     <title>数据库基本操作</title>
-    <link href="http://joe0708.github.io/2016/11/21/database%20basic%20operate/"/>
-    <id>http://joe0708.github.io/2016/11/21/database basic operate/</id>
+    <link href="http://joe0708.github.io/2016/11/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>http://joe0708.github.io/2016/11/21/数据库基本操作/</id>
     <published>2016-11-21T02:15:36.000Z</published>
     <updated>2018-01-14T14:48:25.000Z</updated>
     
@@ -260,8 +260,8 @@
   
   <entry>
     <title>利用 CrossOver 安装Windows应用程序</title>
-    <link href="http://joe0708.github.io/2016/10/24/Crossover%20guide/"/>
-    <id>http://joe0708.github.io/2016/10/24/Crossover guide/</id>
+    <link href="http://joe0708.github.io/2016/10/24/%E5%88%A9%E7%94%A8-CrossOver-%E5%AE%89%E8%A3%85Windows%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://joe0708.github.io/2016/10/24/利用-CrossOver-安装Windows应用程序/</id>
     <published>2016-10-24T01:35:23.000Z</published>
     <updated>2018-01-14T15:53:13.000Z</updated>
     
@@ -287,8 +287,8 @@
   
   <entry>
     <title>解决 macOS Sierra(10.12) 安全与隐私没有允许任何来源的选项 </title>
-    <link href="http://joe0708.github.io/2016/09/22/macOSSierra/"/>
-    <id>http://joe0708.github.io/2016/09/22/macOSSierra/</id>
+    <link href="http://joe0708.github.io/2016/09/22/%E8%A7%A3%E5%86%B3-macOS-Sierra-10-12-%E5%AE%89%E5%85%A8%E4%B8%8E%E9%9A%90%E7%A7%81%E6%B2%A1%E6%9C%89%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90%E7%9A%84%E9%80%89%E9%A1%B9/"/>
+    <id>http://joe0708.github.io/2016/09/22/解决-macOS-Sierra-10-12-安全与隐私没有允许任何来源的选项/</id>
     <published>2016-09-22T05:37:32.000Z</published>
     <updated>2018-01-14T14:48:37.000Z</updated>
     
@@ -312,8 +312,8 @@
   
   <entry>
     <title>利用 AFNetworking + YYCache 对网络请求进行简单缓存</title>
-    <link href="http://joe0708.github.io/2016/09/14/AFNetworking%20YYCache/"/>
-    <id>http://joe0708.github.io/2016/09/14/AFNetworking YYCache/</id>
+    <link href="http://joe0708.github.io/2016/09/14/%E5%88%A9%E7%94%A8-AFNetworking-YYCache-%E5%AF%B9%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E8%BF%9B%E8%A1%8C%E7%AE%80%E5%8D%95%E7%BC%93%E5%AD%98/"/>
+    <id>http://joe0708.github.io/2016/09/14/利用-AFNetworking-YYCache-对网络请求进行简单缓存/</id>
     <published>2016-09-14T08:45:34.000Z</published>
     <updated>2018-01-14T14:54:58.000Z</updated>
     
@@ -342,8 +342,8 @@
   
   <entry>
     <title>UITableView 性能优化</title>
-    <link href="http://joe0708.github.io/2016/09/12/UITableView%20performance%20optimize/"/>
-    <id>http://joe0708.github.io/2016/09/12/UITableView performance optimize/</id>
+    <link href="http://joe0708.github.io/2016/09/12/UITableView-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <id>http://joe0708.github.io/2016/09/12/UITableView-性能优化/</id>
     <published>2016-09-12T03:37:59.000Z</published>
     <updated>2018-01-14T14:48:49.000Z</updated>
     
@@ -369,8 +369,8 @@
   
   <entry>
     <title>iOS中几种数据持久化的方案</title>
-    <link href="http://joe0708.github.io/2016/09/09/iOS%20data%20persistence/"/>
-    <id>http://joe0708.github.io/2016/09/09/iOS data persistence/</id>
+    <link href="http://joe0708.github.io/2016/09/09/iOS%E4%B8%AD%E5%87%A0%E7%A7%8D%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96%E7%9A%84%E6%96%B9%E6%A1%88/"/>
+    <id>http://joe0708.github.io/2016/09/09/iOS中几种数据持久化的方案/</id>
     <published>2016-09-09T06:45:28.000Z</published>
     <updated>2018-01-14T14:48:13.000Z</updated>
     
@@ -394,8 +394,8 @@
   
   <entry>
     <title>为自己的开源库添加对CocoaPods的支持</title>
-    <link href="http://joe0708.github.io/2016/09/07/CocoaPods/"/>
-    <id>http://joe0708.github.io/2016/09/07/CocoaPods/</id>
+    <link href="http://joe0708.github.io/2016/09/07/%E4%B8%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E6%BA%90%E5%BA%93%E6%B7%BB%E5%8A%A0%E5%AF%B9CocoaPods%E7%9A%84%E6%94%AF%E6%8C%81/"/>
+    <id>http://joe0708.github.io/2016/09/07/为自己的开源库添加对CocoaPods的支持/</id>
     <published>2016-09-07T01:34:00.000Z</published>
     <updated>2018-01-14T14:48:16.000Z</updated>
     
@@ -422,8 +422,8 @@
   
   <entry>
     <title>如何排查 message sent to deallocated instance 问题</title>
-    <link href="http://joe0708.github.io/2016/09/06/message%20sent%20to%20deallocated%20instance/"/>
-    <id>http://joe0708.github.io/2016/09/06/message sent to deallocated instance/</id>
+    <link href="http://joe0708.github.io/2016/09/06/%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5-message-sent-to-deallocated-instance-%E9%97%AE%E9%A2%98/"/>
+    <id>http://joe0708.github.io/2016/09/06/如何排查-message-sent-to-deallocated-instance-问题/</id>
     <published>2016-09-06T02:04:10.000Z</published>
     <updated>2018-01-14T14:48:33.000Z</updated>
     
