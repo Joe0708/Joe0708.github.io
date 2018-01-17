@@ -1,0 +1,83 @@
+$family-sans-serif: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+$primary: #fff5d1
+$body-background: #3f4f63
+$text: fade-out(#ffffff, 0.3)
+$text-strong: #ffffff
+$text-light: fade-out(#ffffff, 0.5)
+$link: fade-out(#ffffff, 0.6)
+$link-hover: $text
+$link-active: $text
+$size-normal: 1.13em
+$size-1: 3em
+
+@import "../../node_modules/bulma/bulma"
+
+@keyframes fadeInUp
+  from
+    opacity: 0
+    transform: translate3d(0, 20%, 0)
+  to
+    opacity: 1
+    transform: none
+
+::selection
+  background: fade-out(darken($primary, 0.2), 0.5)
+
+a
+  transition-property: background-color, box-shadow, color, opacity
+  transition-duration: 0.1s
+  transition-timing-function: ease-in-out
+
+.title
+  color: #fff
+
+.hero
+  animation-duration: 1s
+  animation-fill-mode: both
+  animation-name: fadeInUp
+  background: none
+
+.hero-foot
+  padding-bottom: 20px
+
+.column.left
+  +tablet
+    text-align: right
+  +mobile
+    text-align: center
+
+.column.right
+  +tablet
+    text-align: left
+  +mobile
+    text-align: center
+
+.logo
+  border-radius: 24%
+  height: 60px
+  margin: 0 15px 6px 0
+  vertical-align: middle
+  width: 60px
+
+.download-button, .download-button:visited, .mc-form
+  display: inline-block
+  margin-top: 20px
+
+.input, .textarea, .button
+  font-size: 1em
+
+.carousel-container
+  background: url("../../img/iphone.svg") center center no-repeat
+  height: 900px
+  margin: 100px auto
+  width: 450px
+  +tablet
+    margin: 0
+  .carousel
+    margin-left: 39px
+    &, img
+      height: 667px
+      width: 372px
+    img
+      margin: 110px 0 0 0
+
