@@ -1,0 +1,224 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+# 博客的标题
+title: Joe
+# banner显示的子标题
+subtitle: Joe
+# banner显示的简短介绍
+subtitle_desc: 你只是看起来很努力
+# 博客介绍（同时用于seo）
+description: 日常学习、生活及工作的一些心得记录
+# seo关键字
+keywords: joe, ios developer, Python, php, 程序员, 全栈工程师
+# 个人介绍
+introduction: 上帝助自助之人
+
+#设置菜单
+menu:
+  home: / 
+  archive: /archives
+  works: /v2er
+  about: /about
+
+# 博客的favicon图标，支持本地及在线两种方式，本地请将图标放置于 themes/hexo-theme-skapp/source/img 目录下
+favicon_ico: http://ojpb4w81b.bkt.clouddn.com/18-1-21/20464627.jpg
+
+# 博客的左上角logo图标，支持本地及在线两种方式
+logo: http://ojpb4w81b.bkt.clouddn.com/18-1-21/52390117.jpg
+
+# 头像/二维码（用于显示在底部）二选一
+avatar: http://ojpb4w81b.bkt.clouddn.com/18-1-15/90794672.jpg
+qrcode: http://ojpb4w81b.bkt.clouddn.com/18-1-15/12385169.jpg
+
+# 文章的默认封面
+default_cover: http://ojpb4w81b.bkt.clouddn.com/18-1-15/77975184.jpg
+
+# header 的背景图
+header_cover: http://ojpb4w81b.bkt.clouddn.com/18-1-15/6753202.jpg
+
+# 404 页面的背景图
+# error_page_bg: http://oo12ugek5.bkt.clouddn.com/blog/images/dogs.jpg
+
+# 页面加载loading图标
+# loader_img: http://ojpb4w81b.bkt.clouddn.com/18-1-14/8361642.jpg
+
+# 站长信息
+author:
+  name: Joe
+  link: https://github.com/Joe0708
+
+# 用于页面 footer 的站长信息
+about:
+  info: 分享日常学习、生活及工作的一些心得总结，欢迎点击右下角订阅 rss。
+  address: Guangzhou, Guangdong Province, China
+  email: aidevjoe@gmail.com
+
+language: zh-cn
+timezone:
+
+
+# Busuanzi 不蒜了文章统计
+busuanzi: true
+
+# Baidu statistic
+baidu_statistic: e4350a0055b32f40fc2388984a6af81d
+
+# # Feed Atom
+# feed:
+#   type: atom
+#   path: atom.xml
+#   limit: 20
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+
+# 评论系统  
+gitTalk:
+  clientId: a6b73149690856adf53e
+  clientSecret: 2927c75214be49ec5f722b32e6724adae4cb5be4
+  repo: Joe0708.github.io
+  owner: [Joe0708]
+  admin: [Joe0708]
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://joe0708.github.io/
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 12
+  order_by: -date
+  
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 12
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: hexo-theme-skapp #landscape
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy: 
+  type: git 
+  repo: https://github.com/Joe0708/Joe0708.github.io.git 
+  branch: master
+
+
+
+
+
+#  Hexo Theme config
+
+# Sass
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
+
+# Autoprefixer
+autoprefixer:
+  exclude:
+    - '*.min.css'
+  browsers:
+    - 'last 2 versions'
+
+# Lunr
+lunr:
+  field: all
+  fulltext: false
+  path: assets/lunr/
+
+# filter_cleanup
+hfc_useref:
+  enable: true
+  concat: true
+
+hfc_html:
+  enable: true
+  exclude:
+
+hfc_css:
+  enable: true
+  exclude: 
+    - '*.min.css'
+
+hfc_js:
+  enable: true
+  mangle: true
+  exclude: 
+    - '*.min.js'
+
+hfc_img:
+  enable: false
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+
+hfc_favicons:
+  enable: false
+  src: img/blog-logo.png
+  target: img/
+  icons:
+    android: true
+    appleIcon: true
+    appleStartup: false
+    coast: false
+    favicons: true
+    firefox: false
+    opengraph: false
+    windows: true
+    yandex: false

@@ -1,0 +1,12 @@
+- title: Github
+  icon: icon-github
+  link: https://github.com/Joe0708
+- title: WeiBo
+  icon: icon-weibo
+  link: https://weibo.com/5363151025/profile
+- title: Email
+  icon: icon-email
+  link: mailto:aidevjoe@gmail.com
+- title: RSS
+  icon: icon-rss
+  link: /atom.xml
