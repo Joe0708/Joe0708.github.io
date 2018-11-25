@@ -5,9 +5,9 @@
   <subtitle>Joe</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://joe0708.github.io/"/>
+  <link href="http://aidevjoe.github.io/"/>
   <updated>2018-11-25T06:22:00.889Z</updated>
-  <id>http://joe0708.github.io/</id>
+  <id>http://aidevjoe.github.io/</id>
   
   <author>
     <name>[object Object]</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>利用 Apple Configurator 2 获取 iOS 设备上App的ipa文件.md</title>
-    <link href="http://joe0708.github.io/2018/11/25/%E5%88%A9%E7%94%A8-Apple-Configurator-2-%E8%8E%B7%E5%8F%96-iOS-%E8%AE%BE%E5%A4%87%E4%B8%8AApp%E7%9A%84ipa%E6%96%87%E4%BB%B6-md/"/>
-    <id>http://joe0708.github.io/2018/11/25/利用-Apple-Configurator-2-获取-iOS-设备上App的ipa文件-md/</id>
+    <link href="http://aidevjoe.github.io/2018/11/25/%E5%88%A9%E7%94%A8-Apple-Configurator-2-%E8%8E%B7%E5%8F%96-iOS-%E8%AE%BE%E5%A4%87%E4%B8%8AApp%E7%9A%84ipa%E6%96%87%E4%BB%B6-md/"/>
+    <id>http://aidevjoe.github.io/2018/11/25/利用-Apple-Configurator-2-获取-iOS-设备上App的ipa文件-md/</id>
     <published>2018-11-25T06:17:46.000Z</published>
     <updated>2018-11-25T06:22:00.889Z</updated>
     
@@ -35,18 +35,18 @@
     </summary>
     
     
-      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/tags/iOS/"/>
     
-      <category term="macOS" scheme="http://joe0708.github.io/tags/macOS/"/>
+      <category term="macOS" scheme="http://aidevjoe.github.io/tags/macOS/"/>
     
   </entry>
   
   <entry>
     <title>使用 Nginx 和 Supervisor 部署 Vapor 应用程序</title>
-    <link href="http://joe0708.github.io/2018/07/11/%E4%BD%BF%E7%94%A8-Nginx-%E5%92%8C-Supervisor-%E9%83%A8%E7%BD%B2-Vapor-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"/>
-    <id>http://joe0708.github.io/2018/07/11/使用-Nginx-和-Supervisor-部署-Vapor-应用程序/</id>
+    <link href="http://aidevjoe.github.io/2018/07/11/%E4%BD%BF%E7%94%A8-Nginx-%E5%92%8C-Supervisor-%E9%83%A8%E7%BD%B2-Vapor-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://aidevjoe.github.io/2018/07/11/使用-Nginx-和-Supervisor-部署-Vapor-应用程序/</id>
     <published>2018-07-11T09:03:35.000Z</published>
-    <updated>2018-07-13T01:17:19.452Z</updated>
+    <updated>2018-11-25T06:28:54.022Z</updated>
     
     <content type="html"><![CDATA[<h2 id="一、安装-Vapor、Swift"><a href="#一、安装-Vapor、Swift" class="headerlink" title="一、安装 Vapor、Swift"></a>一、安装 Vapor、Swift</h2><h4 id="添加-API-Repo"><a href="#添加-API-Repo" class="headerlink" title="添加 API Repo"></a>添加 API Repo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ eval &quot;$(curl -sL https://apt.vapor.sh)&quot;</span><br></pre></td></tr></table></figure><h4 id="安装-Vapor"><a href="#安装-Vapor" class="headerlink" title="安装 Vapor"></a>安装 Vapor</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install swift vapor</span><br></pre></td></tr></table></figure><h4 id="验证安装结果"><a href="#验证安装结果" class="headerlink" title="验证安装结果"></a>验证安装结果</h4><p>输入以下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ swift --version</span><br></pre></td></tr></table></figure><p>您应该会看到类似下面的输出:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Swift version 4.1 (swift-4.1-RELEASE)</span><br><span class="line">Target: x86_64-unknown-linux-gnu</span><br></pre></td></tr></table></figure><h2 id="二、创建一个最基本的-Vapor-项目"><a href="#二、创建一个最基本的-Vapor-项目" class="headerlink" title="二、创建一个最基本的 Vapor 项目"></a>二、创建一个最基本的 Vapor 项目</h2><p>使用以下命令创建一个默认基于 API 模版的项目</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vapor new Hello</span><br></pre></td></tr></table></figure><p>等待创建完成，进入该目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd Hello</span><br></pre></td></tr></table></figure><p>编译</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vapor build</span><br></pre></td></tr></table></figure><p>运行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vapor run serve</span><br></pre></td></tr></table></figure><p>如无意外，访问 <strong><a href="http://localhost/hello" target="_blank" rel="noopener">http://localhost/hello</a></strong> 将会显示 “hello world”.</p><h2 id="三、安装并设置-Nginx"><a href="#三、安装并设置-Nginx" class="headerlink" title="三、安装并设置 Nginx"></a>三、安装并设置 Nginx</h2><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>通过运行以下命令安装 Nginx：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update </span><br><span class="line">$ sudo apt-get install nginx</span><br></pre></td></tr></table></figure><p>通过从浏览器向服务器的域名或 IP 发送GET请求来检查 nginx是否设置正确。如果您看到下面的欢迎页面，则表示您已成功设置Nginx。</p><p><img src="http://ojpb4w81b.bkt.clouddn.com/18-7-11/82908135.jpg" alt=""></p><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>修改 Nginx 配置信息以将请求转发到 Vapor 来处理</p><p>更改默认的配置文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/nignx/sites-available/default</span><br></pre></td></tr></table></figure><p>修改成下面这样。</p><blockquote><p>在开始前，建议您将默认配置文件备份一份，以防止错误。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">listen 80 default_server;</span><br><span class="line">listen [::]:80 default_server;</span><br><span class="line"></span><br><span class="line">root /home/ubuntu/v2erBackend/Public/; </span><br><span class="line"></span><br><span class="line">try_files $uri @proxy;</span><br><span class="line"></span><br><span class="line">location @proxy &#123;</span><br><span class="line">proxy_pass http://127.0.0.1:8080;</span><br><span class="line">    proxy_pass_header Server;</span><br><span class="line">    proxy_set_header Host $host;</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    proxy_pass_header Server;</span><br><span class="line">    proxy_connect_timeout 3s;</span><br><span class="line">    proxy_read_timeout 10s;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><p>运行 Nginx 服务器，测试是否转发成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service nginx restart</span><br><span class="line">$ cd /home/ubuntu/Hello   # 创建的 Vapor 项目路径</span><br><span class="line">$ vapor build</span><br><span class="line">$ vapor run serve</span><br></pre></td></tr></table></figure><p>通过浏览器访问 <strong><a href="http://YourDomainOrIPAddress/hello" target="_blank" rel="noopener">http://YourDomainOrIPAddress/hello</a></strong> ，如果正常，它将会显示 “hello world”.</p><p>到这里我们已经正常部署项目，但是有一个问题，如果我们按 <strong>Ctrl-C</strong> 或 关闭运行服务器的终端窗口，它将停止工作。我们希望关闭当前会话服务也能正常运行，所以我们需要 <strong>Supervisor</strong> 协助我们管理进程通过后台来运行。</p><h2 id="四、安装并设置-Supervisor"><a href="#四、安装并设置-Supervisor" class="headerlink" title="四、安装并设置 Supervisor"></a>四、安装并设置 Supervisor</h2><h4 id="通过运行以下命令安装-Supervisor："><a href="#通过运行以下命令安装-Supervisor：" class="headerlink" title="通过运行以下命令安装 Supervisor："></a>通过运行以下命令安装 Supervisor：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update </span><br><span class="line">$ sudo apt-get install supervisor</span><br></pre></td></tr></table></figure><p>supervisor 配置需要放在 <strong>/etc/supervisor/conf.d/</strong> 目录下，以我们之前的项目 <strong>Hello</strong> 为例，在 <strong>/etc/supervisor/conf.d/</strong> 目录下创建一个 <strong>hello.conf</strong> 文件，输入以下配置信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[program:hello] # hello 即程序名称</span><br><span class="line">command=vapor run serve</span><br><span class="line">directory=/home/ubuntu/Hello # 项目路径</span><br><span class="line">user=ubuntu # 脚本运行的用户身份 </span><br><span class="line">stdout_logfile=/var/log/supervisor/%(program_name)-stdout.log</span><br><span class="line">stderr_logfile=/var/log/supervisor/%(program_name)-stderr.log</span><br></pre></td></tr></table></figure><h4 id="加载配置文件并使用-Supervisor-在后台运行-hello。"><a href="#加载配置文件并使用-Supervisor-在后台运行-hello。" class="headerlink" title="加载配置文件并使用 Supervisor 在后台运行 hello。"></a>加载配置文件并使用 Supervisor 在后台运行 <strong>hello</strong>。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo supervisorctl reread </span><br><span class="line">$ sudo supervisorctl add hello </span><br><span class="line">$ sudo supervisorctl start hello</span><br></pre></td></tr></table></figure><p>如无意外，现在你可以关闭终端，通过浏览器访问 <strong><a href="http://YourDomainOrIPAddress/hello" target="_blank" rel="noopener">http://YourDomainOrIPAddress/hello</a></strong> ，它将会显示 “hello world”.</p><h4 id="相关命令："><a href="#相关命令：" class="headerlink" title="相关命令："></a>相关命令：</h4><p>查看所有子进程的状态：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo supervisorctl status</span><br></pre></td></tr></table></figure><p>关闭、开启所有的子进程：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo supervisorctl stop all</span><br><span class="line"></span><br><span class="line">$ sudo supervisorctl start all</span><br></pre></td></tr></table></figure><p>更新配置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo supervisorctl update</span><br></pre></td></tr></table></figure><p>Enjoy 😊</p>]]></content>
     
@@ -60,14 +60,14 @@
     </summary>
     
     
-      <category term="Vapor" scheme="http://joe0708.github.io/tags/Vapor/"/>
+      <category term="Vapor" scheme="http://aidevjoe.github.io/tags/Vapor/"/>
     
   </entry>
   
   <entry>
     <title>在 macOS 上更优雅的使用答题辅助脚本</title>
-    <link href="http://joe0708.github.io/2018/01/13/%E5%9C%A8-macOS-%E4%B8%8A%E6%9B%B4%E4%BC%98%E9%9B%85%E7%9A%84%E4%BD%BF%E7%94%A8%E7%AD%94%E9%A2%98%E8%BE%85%E5%8A%A9%E8%84%9A%E6%9C%AC/"/>
-    <id>http://joe0708.github.io/2018/01/13/在-macOS-上更优雅的使用答题辅助脚本/</id>
+    <link href="http://aidevjoe.github.io/2018/01/13/%E5%9C%A8-macOS-%E4%B8%8A%E6%9B%B4%E4%BC%98%E9%9B%85%E7%9A%84%E4%BD%BF%E7%94%A8%E7%AD%94%E9%A2%98%E8%BE%85%E5%8A%A9%E8%84%9A%E6%9C%AC/"/>
+    <id>http://aidevjoe.github.io/2018/01/13/在-macOS-上更优雅的使用答题辅助脚本/</id>
     <published>2018-01-13T07:29:57.000Z</published>
     <updated>2018-01-14T16:36:18.000Z</updated>
     
@@ -83,21 +83,21 @@
     
     </summary>
     
-      <category term="Python" scheme="http://joe0708.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://aidevjoe.github.io/categories/Python/"/>
     
     
-      <category term="Python" scheme="http://joe0708.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://aidevjoe.github.io/tags/Python/"/>
     
-      <category term="脚本" scheme="http://joe0708.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
+      <category term="脚本" scheme="http://aidevjoe.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
   <entry>
     <title>Vim 复习笔记</title>
-    <link href="http://joe0708.github.io/2018/01/05/Vim-%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://joe0708.github.io/2018/01/05/Vim-复习笔记/</id>
+    <link href="http://aidevjoe.github.io/2018/01/05/Vim-%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://aidevjoe.github.io/2018/01/05/Vim-复习笔记/</id>
     <published>2018-01-05T14:57:26.000Z</published>
-    <updated>2018-01-14T16:59:53.000Z</updated>
+    <updated>2018-11-25T06:30:12.893Z</updated>
     
     <content type="html"><![CDATA[<h3 id="切换模式"><a href="#切换模式" class="headerlink" title="切换模式"></a>切换模式</h3><ul><li>esc 进入命令模式</li><li>: 进入末尾模式</li></ul><h3 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h3><ul><li>i 光标前插入文本</li><li>I 行首插入文本</li><li>a 光标后插入文本 </li><li>A 行尾插入文本</li><li>o 下一行插入文本</li><li>O 上一行插入文本</li></ul><h3 id="复制粘贴删除"><a href="#复制粘贴删除" class="headerlink" title="复制粘贴删除"></a>复制粘贴删除</h3><ul><li>yy 复制光标所在行</li><li>4yy 光标所在行向下复制4行 </li><li>p 光标处粘贴</li><li>dd 删除/剪切 光标所在行</li><li>4dd 光标所在行向下 删除/剪切 4行</li><li>D 从当前光标处开始删除, 直到行尾</li><li>d0 从当前光标处开始删除, 直到行首 </li><li>u 撤销上一个操作</li><li>Ctrl+r 反撤销</li><li>x 删除光标处单个字符</li><li>X 删除光标处前一个字符</li><li>dw 删除光标所在的整个单词</li></ul><h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><ul><li>r 替换光标处所选字符</li><li>R 替换光标处以后面的所有字符</li><li>:$s/hello/word/g 进入末尾模式并将所有的 hello 替换为 word</li><li>:10,20s/hello/word/g 进入末尾模式并 第10行直第20行之间将所有的 hello 替换为 word</li></ul><h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><p>/hello 进入查找模式, 并搜索 hello<br>a 下一个匹配处<br>A 上一个匹配处</p><h3 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h3><ul><li>j 下</li><li>k 上</li><li>h 左</li><li>l 右</li><li>M 回到当前屏幕中间</li><li>H 回到当前屏幕上方</li><li>L 回到当前屏幕下方</li><li>Ctrl+f 向下翻一页</li><li>Ctrl+b 向上翻一页</li><li>Ctrl+u 向上翻半页</li><li>Ctrl+d 向下翻半页</li><li>11G 光标定位到第11行</li><li>Ctrl+G 回到文档底部</li><li>gg 回到文档顶部</li><li>w 跳到下一个单词的开始处</li><li>b 跳到上一个单词的开始处</li><li>{ 跳到上一段文本的开头</li><li>} 跳到下一段文本的尾部</li></ul><h3 id="选中操作"><a href="#选中操作" class="headerlink" title="选中操作"></a>选中操作</h3><ul><li>v 选中文本, 按字符移动</li><li>V 选中整行文本, 按行移动</li><li>&lt;&lt; 向左移动文本</li><li><blockquote><blockquote><p>向右移动文本</p></blockquote></blockquote></li><li>. 重复执行上一次操作</li></ul><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>shift+zz 保存并退出 相当于 wq</p>]]></content>
     
@@ -115,18 +115,18 @@
     </summary>
     
     
-      <category term="Vim" scheme="http://joe0708.github.io/tags/Vim/"/>
+      <category term="Vim" scheme="http://aidevjoe.github.io/tags/Vim/"/>
     
-      <category term="Linux" scheme="http://joe0708.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://aidevjoe.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>重新学 Linux 命令</title>
-    <link href="http://joe0708.github.io/2018/01/05/%E9%87%8D%E6%96%B0%E5%AD%A6-Linux-%E5%91%BD%E4%BB%A4/"/>
-    <id>http://joe0708.github.io/2018/01/05/重新学-Linux-命令/</id>
+    <link href="http://aidevjoe.github.io/2018/01/05/%E9%87%8D%E6%96%B0%E5%AD%A6-Linux-%E5%91%BD%E4%BB%A4/"/>
+    <id>http://aidevjoe.github.io/2018/01/05/重新学-Linux-命令/</id>
     <published>2018-01-05T14:08:52.000Z</published>
-    <updated>2018-01-14T16:56:58.000Z</updated>
+    <updated>2018-11-25T06:31:42.828Z</updated>
     
     <content type="html"><![CDATA[<h4 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h4><p>options</p><ul><li>-a  显示隐藏文件</li><li>-l  以列表显示当前目录的文件</li><li>-h  以可读方式显示文件大小</li></ul><h4 id="man-command-command-–help"><a href="#man-command-command-–help" class="headerlink" title="man command | command –help"></a>man command | command –help</h4><p>显示 command 的帮助信息</p><h4 id="history"><a href="#history" class="headerlink" title="history"></a>history</h4><p>显示之前执行的历史命令<br>!index 直接执行指定索引的历史命令</p><h4 id="more-filename"><a href="#more-filename" class="headerlink" title="more filename"></a>more filename</h4><p>与 cat 不同的是显示一屏内容 按 f\b(上一页\下一页)内容</p><h4 id="command-gt-filename"><a href="#command-gt-filename" class="headerlink" title="command &gt; filename"></a>command &gt; filename</h4><p>重定向到指定文件</p><h4 id="command-gt-gt-filename"><a href="#command-gt-gt-filename" class="headerlink" title="command &gt;&gt; filename"></a>command &gt;&gt; filename</h4><p>以追加的形式重定向到指定文件</p><h4 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h4><ul><li>cd -  跳转到上一次的路径</li><li>cd ~  跳转到home目录</li><li>cd .. 当前目录的上一个目录</li><li>cd ../.. 当前目录的上一个目录的上一个目录, 可以无限类推</li></ul><h4 id="r"><a href="#r" class="headerlink" title="-r"></a>-r</h4><p>递归</p><h4 id="p"><a href="#p" class="headerlink" title="-p"></a>-p</h4><p>强制删除</p><h4 id="ln"><a href="#ln" class="headerlink" title="ln"></a>ln</h4><p>带参数 -s 创建软链接, 不到参数即硬链接</p><h4 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h4><p>从文件中的查找指定内容<br>-v 不包含指定搜索内容的内容<br>-n 显示行号</p><h4 id="find"><a href="#find" class="headerlink" title="find"></a>find</h4><p>find path “query”<br>-name 以文件名搜索<br>-size 按大小搜索<br>-perm 按权限</p><h4 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h4><p>对文件打包<br>tar [参数] 打包文件名 文件<br>-c 生成档案文件,创建打包文件<br>-v 显示详细过程和进度<br>-f 指定档案文件名称<br>-t 列出档案中所有文件<br>-x 解开档案文件<br>-z 压缩/解压 .gz 后缀压缩文件<br>-j 压缩/解压 .bz2 后缀压缩文件</p><h4 id="which"><a href="#which" class="headerlink" title="which"></a>which</h4><p>查找指定命令所在的目录</p><h4 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h4><p>查看进程信息, 默认只查看当前程序的进程信息<br>-aux 查看所有进程</p><h4 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h4><p>查看当前用户</p><h4 id="useradd"><a href="#useradd" class="headerlink" title="useradd"></a>useradd</h4><p>添加用户</p><h4 id="userdel"><a href="#userdel" class="headerlink" title="userdel"></a>userdel</h4><p>删除用户<br>-r 删除用户时同时删除用户主目录</p><h4 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h4><p>设置/修改 用户密码</p><h4 id="groudadd"><a href="#groudadd" class="headerlink" title="groudadd"></a>groudadd</h4><p>创建用户组</p><h4 id="groupdell"><a href="#groupdell" class="headerlink" title="groupdell"></a>groupdell</h4><p>删除用户组</p><h4 id="groupmod"><a href="#groupmod" class="headerlink" title="groupmod"></a>groupmod</h4><p>查看所有用户组</p><h4 id="usermod"><a href="#usermod" class="headerlink" title="usermod"></a>usermod</h4><p>sudo usermod -a -G 组名 用户名<br>-a 添加到用户组<br>-G 组名</p><h4 id="who"><a href="#who" class="headerlink" title="who"></a>who</h4><p>查看当前登录用户</p><h4 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h4><p>chown 组名 文件名<br>修改文件所有者</p><h4 id="chgrp"><a href="#chgrp" class="headerlink" title="chgrp"></a>chgrp</h4><p>chgrp 组名 文件名<br>修改文件所属组</p><h5 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h5><p>修改文件权限</p>]]></content>
     
@@ -144,14 +144,14 @@
     </summary>
     
     
-      <category term="Linux" scheme="http://joe0708.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://aidevjoe.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>fastlane boarding 实践笔记</title>
-    <link href="http://joe0708.github.io/2017/12/23/fastlane-boarding-%E5%AE%9E%E8%B7%B5%E7%AC%94%E8%AE%B0/"/>
-    <id>http://joe0708.github.io/2017/12/23/fastlane-boarding-实践笔记/</id>
+    <link href="http://aidevjoe.github.io/2017/12/23/fastlane-boarding-%E5%AE%9E%E8%B7%B5%E7%AC%94%E8%AE%B0/"/>
+    <id>http://aidevjoe.github.io/2017/12/23/fastlane-boarding-实践笔记/</id>
     <published>2017-12-23T13:49:00.000Z</published>
     <updated>2018-01-14T16:48:29.000Z</updated>
     
@@ -166,19 +166,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/tags/iOS/"/>
     
-      <category term="fastlane" scheme="http://joe0708.github.io/tags/fastlane/"/>
+      <category term="fastlane" scheme="http://aidevjoe.github.io/tags/fastlane/"/>
     
   </entry>
   
   <entry>
     <title>Chromium for macOS 内置插件、自定义及自动化脚本(二)</title>
-    <link href="http://joe0708.github.io/2017/12/23/Chromium-for-macOS-%E5%86%85%E7%BD%AE%E6%8F%92%E4%BB%B6%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC-(%E4%BA%8C)/"/>
-    <id>http://joe0708.github.io/2017/12/23/Chromium-for-macOS-内置插件、自定义及自动化脚本-(二)/</id>
+    <link href="http://aidevjoe.github.io/2017/12/23/Chromium-for-macOS-%E5%86%85%E7%BD%AE%E6%8F%92%E4%BB%B6%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC-(%E4%BA%8C)/"/>
+    <id>http://aidevjoe.github.io/2017/12/23/Chromium-for-macOS-内置插件、自定义及自动化脚本-(二)/</id>
     <published>2017-12-23T10:43:05.000Z</published>
     <updated>2018-01-14T16:53:16.000Z</updated>
     
@@ -195,14 +195,14 @@
     </summary>
     
     
-      <category term="Chromium" scheme="http://joe0708.github.io/tags/Chromium/"/>
+      <category term="Chromium" scheme="http://aidevjoe.github.io/tags/Chromium/"/>
     
   </entry>
   
   <entry>
     <title>Chromium for macOS 编译教程(一)</title>
-    <link href="http://joe0708.github.io/2017/12/23/Chromium-for-macOS-%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B(%E4%B8%80)/"/>
-    <id>http://joe0708.github.io/2017/12/23/Chromium-for-macOS-编译教程(一)/</id>
+    <link href="http://aidevjoe.github.io/2017/12/23/Chromium-for-macOS-%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B(%E4%B8%80)/"/>
+    <id>http://aidevjoe.github.io/2017/12/23/Chromium-for-macOS-编译教程(一)/</id>
     <published>2017-12-23T08:13:50.000Z</published>
     <updated>2018-01-14T16:53:32.000Z</updated>
     
@@ -220,14 +220,14 @@
     </summary>
     
     
-      <category term="Chromium" scheme="http://joe0708.github.io/tags/Chromium/"/>
+      <category term="Chromium" scheme="http://aidevjoe.github.io/tags/Chromium/"/>
     
   </entry>
   
   <entry>
     <title>Call to undefined function mysql_connect()</title>
-    <link href="http://joe0708.github.io/2016/11/21/Call%20to%20undefined%20function%20mysql%20connect/"/>
-    <id>http://joe0708.github.io/2016/11/21/Call to undefined function mysql connect/</id>
+    <link href="http://aidevjoe.github.io/2016/11/21/Call%20to%20undefined%20function%20mysql%20connect/"/>
+    <id>http://aidevjoe.github.io/2016/11/21/Call to undefined function mysql connect/</id>
     <published>2016-11-21T02:23:16.000Z</published>
     <updated>2018-01-14T14:48:06.000Z</updated>
     
@@ -243,19 +243,19 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://joe0708.github.io/categories/PHP/"/>
+      <category term="PHP" scheme="http://aidevjoe.github.io/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="http://joe0708.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="http://aidevjoe.github.io/tags/PHP/"/>
     
-      <category term="MySQL" scheme="http://joe0708.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://aidevjoe.github.io/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>SQL基础 - 增删改查</title>
-    <link href="http://joe0708.github.io/2016/11/21/SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/"/>
-    <id>http://joe0708.github.io/2016/11/21/SQL基础-增删改查/</id>
+    <link href="http://aidevjoe.github.io/2016/11/21/SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/"/>
+    <id>http://aidevjoe.github.io/2016/11/21/SQL基础-增删改查/</id>
     <published>2016-11-21T02:20:40.000Z</published>
     <updated>2018-01-14T14:48:43.000Z</updated>
     
@@ -270,19 +270,19 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://joe0708.github.io/categories/PHP/"/>
+      <category term="PHP" scheme="http://aidevjoe.github.io/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="http://joe0708.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="http://aidevjoe.github.io/tags/PHP/"/>
     
-      <category term="SQL" scheme="http://joe0708.github.io/tags/SQL/"/>
+      <category term="SQL" scheme="http://aidevjoe.github.io/tags/SQL/"/>
     
   </entry>
   
   <entry>
     <title>数据库基本操作</title>
-    <link href="http://joe0708.github.io/2016/11/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
-    <id>http://joe0708.github.io/2016/11/21/数据库基本操作/</id>
+    <link href="http://aidevjoe.github.io/2016/11/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>http://aidevjoe.github.io/2016/11/21/数据库基本操作/</id>
     <published>2016-11-21T02:15:36.000Z</published>
     <updated>2018-01-14T14:48:25.000Z</updated>
     
@@ -297,19 +297,19 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://joe0708.github.io/categories/PHP/"/>
+      <category term="PHP" scheme="http://aidevjoe.github.io/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="http://joe0708.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="http://aidevjoe.github.io/tags/PHP/"/>
     
-      <category term="MySQL" scheme="http://joe0708.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://aidevjoe.github.io/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>利用 CrossOver 安装Windows应用程序</title>
-    <link href="http://joe0708.github.io/2016/10/24/%E5%88%A9%E7%94%A8-CrossOver-%E5%AE%89%E8%A3%85Windows%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"/>
-    <id>http://joe0708.github.io/2016/10/24/利用-CrossOver-安装Windows应用程序/</id>
+    <link href="http://aidevjoe.github.io/2016/10/24/%E5%88%A9%E7%94%A8-CrossOver-%E5%AE%89%E8%A3%85Windows%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://aidevjoe.github.io/2016/10/24/利用-CrossOver-安装Windows应用程序/</id>
     <published>2016-10-24T01:35:23.000Z</published>
     <updated>2018-01-14T15:53:13.000Z</updated>
     
@@ -324,19 +324,19 @@
     
     </summary>
     
-      <category term="软件" scheme="http://joe0708.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="软件" scheme="http://aidevjoe.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
-      <category term="macOS" scheme="http://joe0708.github.io/tags/macOS/"/>
+      <category term="macOS" scheme="http://aidevjoe.github.io/tags/macOS/"/>
     
-      <category term="CrossOver" scheme="http://joe0708.github.io/tags/CrossOver/"/>
+      <category term="CrossOver" scheme="http://aidevjoe.github.io/tags/CrossOver/"/>
     
   </entry>
   
   <entry>
     <title>解决 macOS Sierra(10.12) 安全与隐私没有允许任何来源的选项 </title>
-    <link href="http://joe0708.github.io/2016/09/22/%E8%A7%A3%E5%86%B3-macOS-Sierra-10-12-%E5%AE%89%E5%85%A8%E4%B8%8E%E9%9A%90%E7%A7%81%E6%B2%A1%E6%9C%89%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90%E7%9A%84%E9%80%89%E9%A1%B9/"/>
-    <id>http://joe0708.github.io/2016/09/22/解决-macOS-Sierra-10-12-安全与隐私没有允许任何来源的选项/</id>
+    <link href="http://aidevjoe.github.io/2016/09/22/%E8%A7%A3%E5%86%B3-macOS-Sierra-10-12-%E5%AE%89%E5%85%A8%E4%B8%8E%E9%9A%90%E7%A7%81%E6%B2%A1%E6%9C%89%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90%E7%9A%84%E9%80%89%E9%A1%B9/"/>
+    <id>http://aidevjoe.github.io/2016/09/22/解决-macOS-Sierra-10-12-安全与隐私没有允许任何来源的选项/</id>
     <published>2016-09-22T05:37:32.000Z</published>
     <updated>2018-11-25T06:22:02.121Z</updated>
     
@@ -351,17 +351,17 @@
     
     </summary>
     
-      <category term="macOS" scheme="http://joe0708.github.io/categories/macOS/"/>
+      <category term="macOS" scheme="http://aidevjoe.github.io/categories/macOS/"/>
     
     
-      <category term="macOS" scheme="http://joe0708.github.io/tags/macOS/"/>
+      <category term="macOS" scheme="http://aidevjoe.github.io/tags/macOS/"/>
     
   </entry>
   
   <entry>
     <title>利用 AFNetworking + YYCache 对网络请求进行简单缓存</title>
-    <link href="http://joe0708.github.io/2016/09/14/%E5%88%A9%E7%94%A8-AFNetworking-YYCache-%E5%AF%B9%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E8%BF%9B%E8%A1%8C%E7%AE%80%E5%8D%95%E7%BC%93%E5%AD%98/"/>
-    <id>http://joe0708.github.io/2016/09/14/利用-AFNetworking-YYCache-对网络请求进行简单缓存/</id>
+    <link href="http://aidevjoe.github.io/2016/09/14/%E5%88%A9%E7%94%A8-AFNetworking-YYCache-%E5%AF%B9%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E8%BF%9B%E8%A1%8C%E7%AE%80%E5%8D%95%E7%BC%93%E5%AD%98/"/>
+    <id>http://aidevjoe.github.io/2016/09/14/利用-AFNetworking-YYCache-对网络请求进行简单缓存/</id>
     <published>2016-09-14T08:45:34.000Z</published>
     <updated>2018-01-14T14:54:58.000Z</updated>
     
@@ -379,19 +379,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/tags/iOS/"/>
     
-      <category term="CocoaPods" scheme="http://joe0708.github.io/tags/CocoaPods/"/>
+      <category term="CocoaPods" scheme="http://aidevjoe.github.io/tags/CocoaPods/"/>
     
   </entry>
   
   <entry>
     <title>UITableView 性能优化</title>
-    <link href="http://joe0708.github.io/2016/09/12/UITableView-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    <id>http://joe0708.github.io/2016/09/12/UITableView-性能优化/</id>
+    <link href="http://aidevjoe.github.io/2016/09/12/UITableView-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <id>http://aidevjoe.github.io/2016/09/12/UITableView-性能优化/</id>
     <published>2016-09-12T03:37:59.000Z</published>
     <updated>2018-01-14T14:48:49.000Z</updated>
     
@@ -406,19 +406,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/tags/iOS/"/>
     
-      <category term="UITableView" scheme="http://joe0708.github.io/tags/UITableView/"/>
+      <category term="UITableView" scheme="http://aidevjoe.github.io/tags/UITableView/"/>
     
   </entry>
   
   <entry>
     <title>iOS中几种数据持久化的方案</title>
-    <link href="http://joe0708.github.io/2016/09/09/iOS%E4%B8%AD%E5%87%A0%E7%A7%8D%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96%E7%9A%84%E6%96%B9%E6%A1%88/"/>
-    <id>http://joe0708.github.io/2016/09/09/iOS中几种数据持久化的方案/</id>
+    <link href="http://aidevjoe.github.io/2016/09/09/iOS%E4%B8%AD%E5%87%A0%E7%A7%8D%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96%E7%9A%84%E6%96%B9%E6%A1%88/"/>
+    <id>http://aidevjoe.github.io/2016/09/09/iOS中几种数据持久化的方案/</id>
     <published>2016-09-09T06:45:28.000Z</published>
     <updated>2018-01-14T14:48:13.000Z</updated>
     
@@ -433,17 +433,17 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>为自己的开源库添加对CocoaPods的支持</title>
-    <link href="http://joe0708.github.io/2016/09/07/%E4%B8%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E6%BA%90%E5%BA%93%E6%B7%BB%E5%8A%A0%E5%AF%B9CocoaPods%E7%9A%84%E6%94%AF%E6%8C%81/"/>
-    <id>http://joe0708.github.io/2016/09/07/为自己的开源库添加对CocoaPods的支持/</id>
+    <link href="http://aidevjoe.github.io/2016/09/07/%E4%B8%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E6%BA%90%E5%BA%93%E6%B7%BB%E5%8A%A0%E5%AF%B9CocoaPods%E7%9A%84%E6%94%AF%E6%8C%81/"/>
+    <id>http://aidevjoe.github.io/2016/09/07/为自己的开源库添加对CocoaPods的支持/</id>
     <published>2016-09-07T01:34:00.000Z</published>
     <updated>2018-01-14T14:48:16.000Z</updated>
     
@@ -459,19 +459,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/tags/iOS/"/>
     
-      <category term="CocoaPods" scheme="http://joe0708.github.io/tags/CocoaPods/"/>
+      <category term="CocoaPods" scheme="http://aidevjoe.github.io/tags/CocoaPods/"/>
     
   </entry>
   
   <entry>
     <title>如何排查 message sent to deallocated instance 问题</title>
-    <link href="http://joe0708.github.io/2016/09/06/%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5-message-sent-to-deallocated-instance-%E9%97%AE%E9%A2%98/"/>
-    <id>http://joe0708.github.io/2016/09/06/如何排查-message-sent-to-deallocated-instance-问题/</id>
+    <link href="http://aidevjoe.github.io/2016/09/06/%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5-message-sent-to-deallocated-instance-%E9%97%AE%E9%A2%98/"/>
+    <id>http://aidevjoe.github.io/2016/09/06/如何排查-message-sent-to-deallocated-instance-问题/</id>
     <published>2016-09-06T02:04:10.000Z</published>
     <updated>2018-01-14T14:48:33.000Z</updated>
     
@@ -489,10 +489,10 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://joe0708.github.io/categories/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://joe0708.github.io/tags/iOS/"/>
+      <category term="iOS" scheme="http://aidevjoe.github.io/tags/iOS/"/>
     
   </entry>
   
