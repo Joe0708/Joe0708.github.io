@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://aidevjoe.github.io/2018/07/11/%E4%BD%BF%E7%94%A8-Nginx-%E5%92%8C-Supervisor-%E9%83%A8%E7%BD%B2-Vapor-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/</loc>
+    
+    <lastmod>2018-11-26T07:07:31.062Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aidevjoe.github.io/2017/12/23/Chromium-for-macOS-%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B(%E4%B8%80)/</loc>
+    
+    <lastmod>2018-11-26T07:06:04.908Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aidevjoe.github.io/2018/11/25/%E5%88%A9%E7%94%A8-Apple-Configurator-2-%E8%8E%B7%E5%8F%96-iOS-%E8%AE%BE%E5%A4%87%E4%B8%8AApp%E7%9A%84ipa%E6%96%87%E4%BB%B6-md/</loc>
+    
+    <lastmod>2018-11-26T06:59:21.810Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://aidevjoe.github.io/2018/11/26/%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87-App-%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82/</loc>
     
-    <lastmod>2018-11-26T06:57:46.576Z</lastmod>
+    <lastmod>2018-11-26T06:57:57.845Z</lastmod>
     
   </url>
   
@@ -12,20 +33,6 @@
     <loc>http://aidevjoe.github.io/2016/09/22/%E8%A7%A3%E5%86%B3-macOS-Sierra-10-12-%E5%AE%89%E5%85%A8%E4%B8%8E%E9%9A%90%E7%A7%81%E6%B2%A1%E6%9C%89%E5%85%81%E8%AE%B8%E4%BB%BB%E4%BD%95%E6%9D%A5%E6%BA%90%E7%9A%84%E9%80%89%E9%A1%B9/</loc>
     
     <lastmod>2018-11-25T09:24:32.726Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aidevjoe.github.io/2018/11/25/%E5%88%A9%E7%94%A8-Apple-Configurator-2-%E8%8E%B7%E5%8F%96-iOS-%E8%AE%BE%E5%A4%87%E4%B8%8AApp%E7%9A%84ipa%E6%96%87%E4%BB%B6-md/</loc>
-    
-    <lastmod>2018-11-25T09:18:12.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aidevjoe.github.io/2018/01/05/Vim-%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2018-11-25T09:10:28.056Z</lastmod>
     
   </url>
   
@@ -54,20 +61,6 @@
     <loc>http://aidevjoe.github.io/2017/12/23/fastlane-boarding-%E5%AE%9E%E8%B7%B5%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2018-11-25T09:10:11.172Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aidevjoe.github.io/2017/12/23/Chromium-for-macOS-%E5%86%85%E7%BD%AE%E6%8F%92%E4%BB%B6%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC-(%E4%BA%8C)/</loc>
-    
-    <lastmod>2018-11-25T09:10:05.291Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aidevjoe.github.io/2017/12/23/Chromium-for-macOS-%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B(%E4%B8%80)/</loc>
-    
-    <lastmod>2018-11-25T09:10:01.207Z</lastmod>
     
   </url>
   
@@ -103,13 +96,6 @@
     <loc>http://aidevjoe.github.io/2016/11/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
     
     <lastmod>2018-11-25T09:09:38.618Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aidevjoe.github.io/2018/07/11/%E4%BD%BF%E7%94%A8-Nginx-%E5%92%8C-Supervisor-%E9%83%A8%E7%BD%B2-Vapor-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/</loc>
-    
-    <lastmod>2018-11-25T09:09:34.352Z</lastmod>
     
   </url>
   
