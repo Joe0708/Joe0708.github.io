@@ -1,0 +1,39 @@
+body {
+	margin:0;
+	padding::0;
+	font-family: "Hiragino Sans GB", "Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+div {
+	position:fixed;
+	top:0;
+	left:0;
+}
+img {
+	border-radius:2px;
+}
+#hanrume:hover {
+    cursor:pointer;
+}
+#hanrume, #zhr, #wel{
+	display:none
+}
+#images > div {
+	opacity:0;
+	border-radius:3px;
+}
+#background{
+	width:80%;
+	height:82%;
+	background-color:rgb(255,255,255);
+	float:none;
+	opacity:0.4;
+	display:none;
+	border-radius:5px;
+}
+#text {
+    font-size: 1.5em;
+}
+#text > p {
+	margin:0;
+	color:#333;
+}
