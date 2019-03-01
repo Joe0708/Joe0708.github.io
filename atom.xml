@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aidevjoe.github.io/"/>
-  <updated>2018-11-26T06:57:57.845Z</updated>
+  <updated>2019-03-01T05:45:10.078Z</updated>
   <id>http://aidevjoe.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>升级 macOS 自带 bash 到最新版本</title>
+    <link href="http://aidevjoe.github.io/2019/03/01/%E5%8D%87%E7%BA%A7macOS%E8%87%AA%E5%B8%A6bash/"/>
+    <id>http://aidevjoe.github.io/2019/03/01/升级macOS自带bash/</id>
+    <published>2019-03-01T05:30:44.000Z</published>
+    <updated>2019-03-01T05:45:10.078Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="首先查看当前-bash-版本"><a href="#首先查看当前-bash-版本" class="headerlink" title="首先查看当前 bash 版本"></a>首先查看当前 bash 版本</h3><p>使用 <code>bash -version</code> 命令查看当前 bash 版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ bash -version</span><br><span class="line">GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin18)</span><br><span class="line">Copyright (C) 2007 Free Software Foundation, Inc.</span><br></pre></td></tr></table></figure><h3 id="通过-homebrew-安装最新版-bash"><a href="#通过-homebrew-安装最新版-bash" class="headerlink" title="通过 homebrew 安装最新版 bash"></a>通过 homebrew 安装最新版 bash</h3><p>一、如果没有安装 homebrew，执行以下命令安装 homebrew</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure><p>二、安装 bash</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install bash</span><br></pre></td></tr></table></figure><p>三、替换系统自带 bash，并做备份</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mv /bin/bash /bin/bash.origin</span><br><span class="line">$ sudo ln -s /usr/local/opt/bash/bin/bash /bin/bash</span><br></pre></td></tr></table></figure><p>四、由于 macOS 下的 sh 并不是直接链接 bash，而是 bash 的一个文件拷贝。所以还要替换默认的 sh 指向的命令为 bash，如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mv /bin/sh /bin/sh.origin</span><br><span class="line">$ sudo ln -s /usr/local/opt/bash/bin/bash /bin/sh</span><br></pre></td></tr></table></figure><h3 id="最后验证是否安装成功"><a href="#最后验证是否安装成功" class="headerlink" title="最后验证是否安装成功"></a>最后验证是否安装成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ bash -version</span><br><span class="line">GNU bash，版本 5.0.2(1)-release (x86_64-apple-darwin18.2.0)</span><br><span class="line">Copyright (C) 2019 Free Software Foundation, Inc.</span><br><span class="line">许可证 GPLv3+: GNU GPL 许可证第三版或者更新版本 &lt;http://gnu.org/licenses/gpl.html&gt;</span><br><span class="line"></span><br><span class="line">本软件是自由软件，您可以自由地更改和重新发布。</span><br><span class="line">在法律许可的情况下特此明示，本软件不提供任何担保。</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;首先查看当前-bash-版本&quot;&gt;&lt;a href=&quot;#首先查看当前-bash-版本&quot; class=&quot;headerlink&quot; title=&quot;首先查看当前 bash 版本&quot;&gt;&lt;/a&gt;首先查看当前 bash 版本&lt;/h3&gt;&lt;p&gt;使用 &lt;code&gt;bash -version
+      
+    
+    </summary>
+    
+      <category term="macOS" scheme="http://aidevjoe.github.io/categories/macOS/"/>
+    
+    
+      <category term="macOS" scheme="http://aidevjoe.github.io/tags/macOS/"/>
+    
+      <category term="bash" scheme="http://aidevjoe.github.io/tags/bash/"/>
+    
+  </entry>
   
   <entry>
     <title>如何提升 App 用户体验的一些细节</title>
