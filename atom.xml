@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aidevjoe.github.io/"/>
-  <updated>2019-03-01T05:45:10.078Z</updated>
+  <updated>2019-03-22T03:07:35.281Z</updated>
   <id>http://aidevjoe.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将 SVN 仓库转换成 Git 仓库</title>
+    <link href="http://aidevjoe.github.io/2019/03/22/%E5%B0%86%20SVN%20%E4%BB%93%E5%BA%93%E8%BD%AC%E6%8D%A2%E6%88%90%20Git%20%E4%BB%93%E5%BA%93/"/>
+    <id>http://aidevjoe.github.io/2019/03/22/将 SVN 仓库转换成 Git 仓库/</id>
+    <published>2019-03-22T03:02:32.000Z</published>
+    <updated>2019-03-22T03:07:35.281Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于习惯了 Git 代码版本控制工具的便利，最近接手公司老项目都是使用 SVN，缺点就不说了，实在受不了这种古董级到代码版本控制工具。所以今天抽了时间，将 SVN 转换到 Git 仓库，以下记录操作记录。</p><h2 id="一、-获取原-SVN-仓库使用的用户名字列表"><a href="#一、-获取原-SVN-仓库使用的用户名字列表" class="headerlink" title="一、 获取原 SVN 仓库使用的用户名字列表"></a>一、 获取原 SVN 仓库使用的用户名字列表</h2><p>SVN 中，每个用户提交时都需要在系统中有一个用户，用于记录在提交信息中。但是这些用户仅有用户名，与 Git 的默认格式有些差异，所以需要先获取原仓库的用户信息，然后修改成符合 Git 格式这些信息的格式和内容与 Git 默认的格式和内容略有差别，所以我们需要去获得原 SVN 仓库使用的用户名字列表信息并做格式改动。</p><p>进入到 SVN 项目工作目录中，执行以下命令获取原用户列表：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svn <span class="built_in">log</span> -q | awk -F <span class="string">'|'</span> <span class="string">'/^r/ &#123;sub("^ ", "", $2); sub(" $", "", $2); print $2" = "$2" &lt;"$2"&gt;"&#125;'</span> | sort -u &gt; users.txt</span><br></pre></td></tr></table></figure><p>执行完改命令，会在当前目录生成 <code>users.text</code> 文件，格式看起来像下面这样</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Joe = Joe &lt;Joe&gt;</span><br><span class="line">Lisen = Lisen &lt;Lisen&gt;</span><br><span class="line">Zl = Zl &lt;Zl&gt;</span><br></pre></td></tr></table></figure><p>我们需要将它修改成 Git 的格式，为每个用户添加 Email</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Joe = Joe &lt;aidevjoe@example.com&gt;</span><br><span class="line">Lisen = Lisen &lt;Lisen@example.com&gt;</span><br><span class="line">Zl = Zl &lt;Zl@example.com&gt;</span><br></pre></td></tr></table></figure><h2 id="二、-生成-Git-仓库"><a href="#二、-生成-Git-仓库" class="headerlink" title="二、 生成 Git 仓库"></a>二、 生成 Git 仓库</h2><p>利用 Git 内置的 <code>git svn</code> 命令克隆 SVN 仓库</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git svn <span class="built_in">clone</span> --stdlayout --no-metadata -A user.txt https://192.168.1.50/svn/Repo/ RepoDir</span><br></pre></td></tr></table></figure><blockquote><p><code>--stdlayout</code>: 示你的项目在 SVN 中是常见的 “trunk/branches/tags” 目录结构，如果不是，那你需要使用 –tags, –branches, –trunk 参数（请通过 git svn help 自行了解）。<br><code>--no-metadata</code>: 让原 SVN 项目日志中的内容更符合 Git 的格式规范，且去掉了 SVN ID、URL 此类无用信息。<br><code>-A user.txt</code>: <code>-A</code> 为指定用户列表信息。<code>user.txt</code> 为用户列表信息的文件。如果 <code>user.txt</code> 不当前目录，可以改为具体路径，例如 <code>-A /Users/joe/Desktop/user.txt</code> 。<br><code>https://192.168.1.50/svn/Repo/</code>: 表示 SVN 的仓库服务器地址。<br><code>RepoDir</code>: 为目标目录，这将会在 RepoDir 新建一个 Git repo，并开始从 SVN 中拉取代码。</p></blockquote><p>如果遇到以下错误</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Author: VisualSVN Server not defined in userinfo.txt file</span><br></pre></td></tr></table></figure><p>在 <code>user.txt</code> 文件里添加以下内容即可</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VisualSVN Server = Visual SVN Server &lt;admin@yourdomain.com&gt;</span><br></pre></td></tr></table></figure><p>如果原仓库比较大，时间可能需要一定时间，等待获取完，生成好的 Git 仓库将放在您指定的目录中。</p><p>如果需要获取其他分支，可以参考下面的链接.</p><p>Done.</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>1、<a href="https://www.lovelucy.info/codebase-from-svn-to-git-migration-keep-commit-history.html" target="_blank" rel="noopener">将代码库从 SVN 迁移至 Git 并保留所有 commit 记录</a><br>2、<a href="https://coding.net/help/doc/git/import-from-svn.html" target="_blank" rel="noopener">如何将 SVN 仓库代码导入 CODING</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;由于习惯了 Git 代码版本控制工具的便利，最近接手公司老项目都是使用 SVN，缺点就不说了，实在受不了这种古董级到代码版本控制工具。所以今
+      
+    
+    </summary>
+    
+      <category term="Git" scheme="http://aidevjoe.github.io/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://aidevjoe.github.io/tags/Git/"/>
+    
+      <category term="SVN" scheme="http://aidevjoe.github.io/tags/SVN/"/>
+    
+  </entry>
   
   <entry>
     <title>升级 macOS 自带 bash 到最新版本</title>
@@ -519,34 +546,6 @@
       <category term="iOS" scheme="http://aidevjoe.github.io/tags/iOS/"/>
     
       <category term="CocoaPods" scheme="http://aidevjoe.github.io/tags/CocoaPods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何排查 message sent to deallocated instance 问题</title>
-    <link href="http://aidevjoe.github.io/2016/09/06/%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5-message-sent-to-deallocated-instance-%E9%97%AE%E9%A2%98/"/>
-    <id>http://aidevjoe.github.io/2016/09/06/如何排查-message-sent-to-deallocated-instance-问题/</id>
-    <published>2016-09-06T02:04:10.000Z</published>
-    <updated>2018-11-25T09:09:28.375Z</updated>
-    
-    <content type="html"><![CDATA[<p>对于开发者来说, 遇到这种问题是很难排查的, 没有堆栈信息, 不知从和查起,今天项目过程中遇到这个问题,脑袋那个头大. 不过最后还是在网上找到的排查方案,在这里做个笔记</p><blockquote><p>编译器环境:Xcode 7.3.2</p></blockquote><blockquote><p>运行环境  : 模拟器 (貌似真机不支持, 没试过)</p></blockquote><p>当我们的对象被销毁时, 再发送消息就会导致野指针错误, 而控制台也没有任何输入, 如下提示</p><p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/52656420313-35e08fe121255270.jpg" alt="image"></p><p>遇到这种问题, 会一头雾水不知如何解决,别急,下面跟着我一步步排查问题</p><p>首页我们打开Xcode的僵尸对象(Zombie Objects), 点击我们的项目并选择 “Edit Scheme…” ,如图</p><p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/1525420313-b50cb26e90aa22a4.jpg" alt="image"></p><p>然后点击 Diagnostics, 勾选 Enable Zombie Objects ,如图</p><p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/147312764359081.jpg?imageView2/0/format/jpg" alt="image"></p><p>重新运行项目,重现刚才导致野指针的的问题,现在奔溃时控制台就会有一条奔溃信息</p><p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/147312767036825.jpg?imageView2/0/format/jpg" alt="image"></p><p>但是得到这个, 我们还是没法排查问题, 别急, 我们先把上图中的内存地址存起来 , 也就是 : 0x7f8ed30bedd0</p><p>我们打开系统自带的活动监视器, 并在搜索按钮中输入您的项目名称,例如我的叫 “naL”, 那我就搜索 “nal”, 我们会得到一条进程,我们需要其中的 “PID” 信息</p><p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/14731276998473.jpg?imageView2/0/format/jpg" alt="image"></p><p>现在我们得到如下信息</p><blockquote><p>进程ID：31029</p></blockquote><p>崩溃地址：0x7f8ed30bedd0</p><p>接下来我们打开终端，输入以下命令：</p><blockquote><p>sudo malloc_history 31029 0x7f8ed30bedd0</p></blockquote><p><img src="http://7xqmjb.com1.z0.glb.clouddn.com/147312778931138.jpg?imageView2/0/format/jpg" alt="image"></p><p>图中红色划线的地方就是最后调用导致奔溃的地方,我们根据这个线索就可以查到问题根源</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;对于开发者来说, 遇到这种问题是很难排查的, 没有堆栈信息, 不知从和查起,今天项目过程中遇到这个问题,脑袋那个头大. 不过最后还是在网上找到的排查方案,在这里做个笔记&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;编译器环境:Xcode 7.3.2&lt;/p&gt;
-&lt;/blockquo
-      
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://aidevjoe.github.io/categories/iOS/"/>
-    
-    
-      <category term="iOS" scheme="http://aidevjoe.github.io/tags/iOS/"/>
     
   </entry>
   
